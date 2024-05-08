@@ -89,7 +89,6 @@
         <artifactId>maven-pmd-plugin</artifactId>
         <version>3.21.2</version> <!-- or use version from pluginManagement -->
         <configuration>
-
           <!-- failOnViolation is actually true by default, but can be disabled -->
           <failOnViolation>false</failOnViolation>
           <!-- printFailingErrors is pretty useful -->
@@ -188,26 +187,26 @@
       <dependency>
         <groupId>com.sismics.docs</groupId>
         <artifactId>docs-core</artifactId>
-        <version>${project.version}</version>
+        <version>1.10</version>
       </dependency>
     
       <dependency>
         <groupId>com.sismics.docs</groupId>
         <artifactId>docs-web-common</artifactId>
-        <version>${project.version}</version>
+        <version>1.10</version>
       </dependency>
     
       <dependency>
         <groupId>com.sismics.docs</groupId>
         <artifactId>docs-web-common</artifactId>
         <type>test-jar</type>
-        <version>${project.version}</version>
+        <version>1.10</version>
       </dependency>
     
       <dependency>
         <groupId>com.sismics.docs</groupId>
         <artifactId>docs-web</artifactId>
-        <version>${project.version}</version>
+        <version>1.10</version>
       </dependency>
     
       <dependency>
