@@ -8,6 +8,7 @@ pipeline {
         }
         stage('pmd') {
             steps {
+                bat 'mvn clean install -U'
                 bat 'mvn pmd:pmd'
             }
         }
