@@ -6,16 +6,17 @@ pipeline {
                 bat 'mvn -B -DskipTests clean install'
             }
         }
+        stage('Doc') {
+            steps {
+                bat 'mvn javadoc:javadoc --fail-never'
+            }
+        }
         stage('pmd') {
             steps {
                 bat 'mvn pmd:pmd'
             }
         }
-        stage('Doc') {
-                    steps {
-                        bat 'mvn javadoc:jar'
-                    }
-                }
+
     }
 
     post {
