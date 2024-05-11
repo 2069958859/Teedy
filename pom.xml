@@ -93,11 +93,8 @@
                 <enabled>true</enabled>
             </snapshots>
         </repository>
-        <snapshotRepository>
-            <id>snapshot-repository</id>
-            <url>https://repository.apache.org/content/groups/snapshots/</url>
-        </snapshotRepository>
     </distributionManagement>
+
     <pluginRepositories>
         <pluginRepository>
             <id>central</id>
@@ -114,32 +111,32 @@
                 <version>${org.apache.maven.plugins.maven-antrun-plugin.version}</version>
             </plugin>
 
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-war-plugin</artifactId>
-                <version>${org.apache.maven.plugins.maven-war-plugin.version}</version>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-pmd-plugin</artifactId>
-                <version>3.21.2</version> <!-- or use version from pluginManagement -->
-                <configuration>
-                    <!-- failOnViolation is actually true by default, but can be disabled -->
-                    <failOnViolation>false</failOnViolation>
-                    <!-- printFailingErrors is pretty useful -->
-                    <printFailingErrors>true</printFailingErrors>
-                    <rulesets>
-                        <ruleset>practice-answer.xml</ruleset>
-                    </rulesets>
-                </configuration>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>check</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
+<!--            <plugin>-->
+<!--                <groupId>org.apache.maven.plugins</groupId>-->
+<!--                <artifactId>maven-war-plugin</artifactId>-->
+<!--                <version>${org.apache.maven.plugins.maven-war-plugin.version}</version>-->
+<!--            </plugin>-->
+<!--            <plugin>-->
+<!--                <groupId>org.apache.maven.plugins</groupId>-->
+<!--                <artifactId>maven-pmd-plugin</artifactId>-->
+<!--                <version>3.21.2</version> &lt;!&ndash; or use version from pluginManagement &ndash;&gt;-->
+<!--                <configuration>-->
+<!--                    &lt;!&ndash; failOnViolation is actually true by default, but can be disabled &ndash;&gt;-->
+<!--                    <failOnViolation>false</failOnViolation>-->
+<!--                    &lt;!&ndash; printFailingErrors is pretty useful &ndash;&gt;-->
+<!--                    <printFailingErrors>true</printFailingErrors>-->
+<!--                    <rulesets>-->
+<!--                        <ruleset>practice-answer.xml</ruleset>-->
+<!--                    </rulesets>-->
+<!--                </configuration>-->
+<!--                <executions>-->
+<!--                    <execution>-->
+<!--                        <goals>-->
+<!--                            <goal>check</goal>-->
+<!--                        </goals>-->
+<!--                    </execution>-->
+<!--                </executions>-->
+<!--            </plugin>-->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
