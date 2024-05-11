@@ -73,7 +73,18 @@
         <tag>HEAD</tag>
     </scm>
 
-    <repositories>
+    <!--    <repositories>-->
+    <!--        <repository>-->
+    <!--            <id>ApacheSnapshot</id>-->
+    <!--            <name>Apache Repository</name>-->
+    <!--            <url>https://repository.apache.org/content/groups/snapshots/</url>-->
+    <!--            <snapshots>-->
+    <!--                <enabled>true</enabled>-->
+    <!--            </snapshots>-->
+    <!--        </repository>-->
+    <!--    </repositories>-->
+
+    <distributionManagement>
         <repository>
             <id>ApacheSnapshot</id>
             <name>Apache Repository</name>
@@ -82,7 +93,18 @@
                 <enabled>true</enabled>
             </snapshots>
         </repository>
-    </repositories>
+        <snapshotRepository>
+            <id>snapshot-repository</id>
+            <url>https://repository.apache.org/content/groups/snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>central</id>
+            <url>http://host:port/content/groups/public</url>
+        </pluginRepository>
+    </pluginRepositories>
+
 
     <build>
         <plugins>
