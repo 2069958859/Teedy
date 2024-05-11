@@ -16,6 +16,11 @@ pipeline {
                 bat 'mvn pmd:pmd'
             }
         }
+        stage('Test report') {
+            steps {
+                bat 'mvn test --fail-never'
+            }
+        }
 
     }
 
